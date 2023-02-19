@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    /* font-family: ; */
+    line-height: 1.7rem;
+    color: white;
+    background: #1f2641;
+    /* background: black; */
+    width: 100%;
+    font-family: 'Raleway', sans-serif!important;
+    background-image:url("material of web/loginback.jpg");
+      background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+.login{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
+.holder{
+    position: relative;
+    top: 8rem;
+   height: 70vh;
+   width: 70vh;
+    box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 1);
+    
+}
+.container h1{
+    text-align: center;
+    font-size: 2rem;
+    margin: 1.5rem 0rem 1.5rem 0rem;
+}
+marquee{
+    padding:5px 15px 5px 15px;  
+    background:transparent;
+     color:#fff!important;
+      font-weight:600;
+       font-size:18px;  
+       border-top: 2px solid rgb(249, 154, 154);
+       border-bottom: 2px solid rgb(249, 154, 154);
+}
+
+.heading{
+    margin-top: 2.5rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-align: center;
+}
+.card-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.card-details .card-box input{
+    width: 18rem;
+    height: 2rem;
+    margin:  1rem  0rem 1rem 0rem;
+    border-radius: 3rem;
+    font-size: 1.1rem;
+    font-weight:600;
+    padding:  1.3rem 1.3rem 1.3rem 2.2rem;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    border:2px black solid ;
+}
+.click{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.click .button input{
+    width: 12rem;
+    height: 2rem;
+    margin:  1rem  0rem 1rem 0rem;
+    border-radius: 3rem;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    
+}
+.click .button input:hover{
+    background: rgba(238, 150, 150, 0.784);
+}
+.holder a{
+    color: aliceblue;
+    font-size: 1.2rem;
+  text-align: center;
+}
+.holder a:hover{
+    color: rgb(247, 133, 133);
+   
+}
+@media screen and (min-width:300px)and (max-width:1000px)  {
+    .login{
+        height: 40vh;
+    }
+   
+}
+@media screen and (max-width:300px) {
+    .login{
+        height: 60vh;
+    }
+    .card-details .card-box input{
+        width: 15rem;
+        height: 2rem;
+        font-size: 1rem;
+        font-weight:600;
+    }
+    .click .button input{
+        width: 8rem;        
+    }
+}

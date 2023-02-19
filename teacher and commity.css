@@ -1,0 +1,1006 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+#close {
+    font-size: 2rem;
+    display: none;
+}
+#open{
+    font-size: 2rem;
+    display: none;
+}
+.header {
+    color: aliceblue;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Rubik Spray Paint', cursive;
+    font-weight: bold;
+}
+
+table tr td {
+    border-left: 2px solid rgba(255, 255, 255, 0.338);
+    padding: 0rem 2rem 0rem 2rem;
+    text-align: center;
+
+}
+
+.fa-solid{
+    color: white;
+}
+
+table tr td a {
+    color: #fff;
+}
+
+#admin {
+    color: rgba(255, 217, 0, 0.784);
+}
+
+/* ==============navigation============= */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(24, 24, 83, 0.904);
+    padding: 2rem;
+}
+
+.sclname {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.scllogo img {
+    width: 5rem;
+    height: 5rem;
+    margin-right: 1.3rem;
+}
+
+.name h1 {
+    text-align: center;
+    color: rgba(255, 217, 0, 0.784);
+}
+
+.name h4 {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.784);
+}
+
+.name p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.784);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.navbar li {
+    padding: 0rem 0.5rem;
+    position: relative;
+    margin: 0.5rem;
+}
+
+.navbar li a {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(239, 229, 229);
+    border: 2px;
+    padding: 5px;
+}
+
+.navbar li:hover:before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid rgba(255, 217, 0, 0.784);
+    border-left: 2px solid rgba(255, 217, 0, 0.784);
+    left: 0;
+    top: 0;
+}
+
+.navbar li:hover:after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-bottom: 2px solid rgba(255, 217, 0, 0.784);
+    border-right: 2px solid rgba(255, 217, 0, 0.784);
+    right: 0;
+    bottom: 0;
+}
+
+.design:before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-top: 2px solid rgba(255, 217, 0, 0.784);
+    border-left: 2px solid rgba(255, 217, 0, 0.784);
+    left: 0;
+    top: -3px;
+}
+
+.design:after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-bottom: 2px solid rgba(255, 217, 0, 0.784);
+    border-right: 2px solid rgba(255, 217, 0, 0.784);
+    right: 0;
+    bottom: -3px;
+}
+
+.navbar li:hover:before {
+    left: -10px;
+    top: -10px;
+}
+
+.navbar li:hover:after {
+    bottom: -10px;
+    right: -10px;
+}
+
+.navbar li a:hover,
+.navbar li a:active {
+    color: rgba(255, 217, 0, 0.784);
+}
+
+.open-close {
+    display: none;
+    color: aliceblue;
+}
+
+.dropdown-menu {
+    display: none;
+    width: 18rem;
+    height: 15rem;
+    border: 2px solid black;
+    z-index: 1;
+}
+
+.dropdown-menu ul li a {
+    margin: 1px 3px 1px 7px;
+    text-align: left;
+    font-size: 15px;
+    font-weight: bolder;
+    font-family: 'Clrndnk', sans-serif;
+}
+
+.navbar li:hover .dropdown-menu {
+    display: inline-block;
+    position: absolute;
+    right: -3rem;
+    top: 1.5rem;
+    background-color: rgb(248, 174, 39);
+}
+
+.dropdown-menu li :hover {
+    background-color: #fff;
+    transition: all 448s ease-in;
+}
+
+.dropdown-menu ul li:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 15px;
+    border-bottom: 2px dotted rgba(225, 225, 225, 0.784);
+    left: 0;
+    top: 2px;
+}
+
+.header-displayed {
+    height: 30vh;
+    width: 100%;
+    border-top: 4px solid rgba(219, 200, 94, 0.784);
+    border-bottom: 4px solid rgba(219, 200, 94, 0.784);
+    /*  background-image: linear-gradient(rgba(102, 80, 215, 0.7),rgba(174, 46, 46, 0.7)); 
+    background-position: center;   
+    background-repeat: no-repeat;
+     */
+}
+
+.middle {
+    width: 100%;
+    height: 30vh;
+    /* background-image: linear-gradient(rgba(17, 5, 71, 0.7), rgba(83, 33, 8, 0.7)), url("idealevent/unnamed (4).jpg"); */
+    background-image: url("idealevent/unnamed (4).jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.heading {
+    background: rgba(24, 24, 83, 0.904);
+}
+
+.heading h2 {
+
+    padding: 0.7rem;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-left: 5rem;
+    text-transform: uppercase;
+}
+
+.about {
+    background: rgb(222, 220, 220);
+    margin: 0rem 0rem 0rem 0rem;
+}
+.intro {
+    margin: 0rem 3rem;
+    background: #fff;
+ 
+}
+.title{
+    margin-top:2.3rem;
+}
+.title h3{
+   font-size: 2.2rem;
+   text-align: center;
+    margin: 1rem;
+}
+.title p{
+    margin-top:7px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.qualify{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+table td{
+   border-left: 2px solid rgba(144, 144, 218, 0.1);  
+
+}
+.student{
+    padding: 0rem 2.5rem 0rem 2.5rem;
+}
+.student h3{
+ text-align: center;
+ font-size: 1.6rem;
+}
+.word{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.work{
+    margin: 0rem 20rem 0rem 20rem;
+    font-family: 'Rubik Spray Paint', cursive;
+}
+.work p{
+    text-align: center;
+    font-size: 1.2rem;
+    word-break:keep-all;
+    text-justify: distribute-all-lines;
+    color:#e79791
+}
+.whywho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 8rem 0rem 8rem;
+    width:fit-content;
+    height:fit-content;
+    font-family: 'Raleway', sans-serif!important;
+}
+.why{
+     margin: 0rem 2rem 0rem 0rem;
+     
+}
+.why h1{
+    font-size: 1.3rem;
+    padding: 1.5rem;
+    font-weight: lighter;
+    color: rgb(228, 159, 103);
+}
+.why p{
+    font-size: 1rem;
+text-align: justify;
+}
+.who{
+      margin: 0rem 0rem 0rem 2rem;
+}
+.who h1{
+    font-size: 1.3rem;
+    padding: 1.5rem;
+    font-weight: lighter;
+    color: rgb(228, 159, 103);
+}
+.who p{
+    font-size: 1rem;
+    text-align: justify;
+}
+.squad{
+    text-align: center;
+    margin: 3rem 2.6rem ;
+    color: rgb(228, 159, 103);
+}
+.squad h1{
+    font-size: 2.5rem;
+}
+.squad p{
+    font-size: 1.2rem;
+    color: rgb(36, 78, 116);
+    margin: 0.8rem;
+}
+.founder {
+    margin-top: 5rem;
+}
+.intofaculty h2 {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    color: #1f2641;
+}
+.intofaculty span{
+    font-size: 1.1rem;
+    line-height: 1.5rem;   
+}
+.intofaculty p{
+    font-size: 1rem; 
+    line-height: 1.5rem;  
+}
+.link{
+    margin: 0.5rem 0rem 0rem 0.2rem;
+}
+ .link img{
+    width:1.3rem;
+height: 1.3rem;
+margin: 7px;
+background-color: #e7c8c6;
+padding: 3px;
+border-radius: 2rem;
+ }
+ .link img:hover{
+    background-color: #c60d00;
+    padding: 2px;
+    border-radius: 2rem;
+ }
+.pro-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin:  2rem 4rem 2rem 4rem;
+   
+}
+
+.pro {
+    flex-direction: column;
+    padding: 10px 12px;
+    border: 1px solid black;
+    cursor: pointer;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+    margin: 1.5rem 1.5rem 1.5rem 1.5rem;
+    border-radius: 1rem;
+    background-color: rgb(235, 239, 239);
+}
+.pro:hover {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.picsir img {
+    width: 100%;
+    height: 10rem;
+    background-color: rgba(188, 188, 182, 0.556);
+    border-radius: 1rem;
+}
+
+.fotter {
+    background: rgba(24, 24, 83, 0.904);
+}
+
+.foot {
+    background: rgba(0, 0, 0, 0.58);
+    padding: 2rem 0rem 2rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Clrndnk', sans-serif;
+    font-weight: bolder;
+}
+
+.jaiho {
+    margin: 0rem 0rem 0rem 3rem;
+}
+
+.socialmedia{
+    display: flex;
+    justify-content: space-between; 
+    font-size:1.5rem ;
+   
+}
+.socialmedia .fa-brands {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid white;
+    margin: 3rem 0rem 0rem 1rem;
+    padding: 5px;
+
+}
+.socialmedia a{
+    color: #fff;
+}
+.socialmedia .fa-brands:hover{
+    background: rgb(204, 97, 31);
+}
+.foot h1 {
+    color: aliceblue;
+}
+
+#cngcolor1 {
+    color: rgb(248 174 39);
+}
+
+.card-box input {
+    width: 10rem;
+    height: 2.5rem;
+    color: #fff;
+    background: rgba(24, 24, 83, 0.904);
+    font-size: 1.2rem;
+    font-family: 'Rubik Spray Paint', cursive;
+}
+
+#text {
+    margin-top: 1rem;
+    background: rgba(24, 24, 83, 0.904);
+    min-height: 4.1rem;
+    width: 20rem;
+    font-family: 'Rubik Spray Paint', cursive;
+    color: rgb(255, 255, 255);
+}
+
+#card-box button {
+    padding: 5px 15px 5px 15px;
+    background-color: yellow;
+    color: rgb(223, 3, 3);
+    font-size: 1rem;
+    font-family: 'Rubik Spray Paint', cursive;
+    font-weight: bolder;
+    border-radius: 5px;
+    margin-top: 1.5rem;
+}
+
+#card-box button:hover {
+    background-color: rgb(65, 16, 125);
+}
+
+
+.scllogo1 img {
+    width: 11rem;
+    height: 8rem;
+    margin-top: 2rem;
+}
+
+.scllogo1 h1 {
+    margin-right: 2rem;
+}
+
+.create {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    align-items: center;
+    font-family: 'Rubik Spray Paint', cursive;
+    font-size: 1rem;
+    background: rgba(24, 24, 83, 0.904);
+}
+
+@media screen and (min-width:300px)and (max-width:1000px) {
+
+    /* =========header========= */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    table {
+        margin: 0.6rem 0rem 0rem 0rem;
+    }
+
+    table tr td {
+        padding: 0rem 1rem 0rem 0.8rem;
+    }
+
+    /* =========navbar========= */
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        position: absolute;
+        top: 30%;
+        right: 0px;
+        width: 100%;
+        height: fit-content;
+        gap: 2rem;
+        background-color:rgba(24, 24, 83);
+        box-shadow: 0 40-x 60px rgba(0, 0, 0, 0.0.3);
+        padding: 10px 0px 0px 20px;
+        visibility: hidden;
+    }
+.open-navbar{
+    visibility:visible;
+
+}
+
+    .dropdown-menu {
+        display: none;
+        height: fit-content;
+        border: 2px solid black;
+    }
+    
+    .dropdown-menu ul li a {
+        margin: 0px 3px 0px 7px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: bolder;
+        font-family: 'Clrndnk', sans-serif;
+    }
+    #close {
+        display: flex;
+        font-size: 2rem;
+    }
+
+    #open {
+        display: flex;
+        font-size: 2rem;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(24, 24, 83, 0.904);
+        padding: 1rem;
+    }
+    .about {
+        background: rgb(222, 220, 220);
+        margin: 0rem;
+    }
+    .heading h2 {
+        font-size: 1.7rem;
+    }
+    .intro {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        margin: 0rem;
+        background: #fff;
+    }
+    .qualify{
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+        margin: 1rem;
+    }
+    .student{
+        padding: 0rem 0rem 0rem 0rem;
+    }
+    .student h3{
+     text-align: center;
+     font-size: 1.2rem;
+    }
+    .student p{
+        font-size: 0.5rem;
+    }
+    .work{
+        margin: 0;
+    }
+    .work p{
+        text-align: center;
+        font-size: 0.8rem;
+        word-break:keep-all;
+        color:#e79791
+    }
+    .whywho{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 0.5rem;
+        width:fit-content;
+        height:fit-content;
+        font-family: 'Raleway', sans-serif!important;
+    }
+    .why{
+         margin: 0rem 0rem 0rem 0rem;
+         
+    }
+    .why h1{
+        font-size: 1.3rem;
+        padding: 1.5rem;
+        font-weight: lighter;
+        color: rgb(228, 159, 103);
+    }
+    .why p{
+        font-size: 1rem;
+    text-align: justify;
+    }
+    .pro-container{
+        margin: 0;
+    }
+    .pro{
+        margin: 8px;
+    }
+    .squad{
+        margin: 0.5rem;
+    }
+    .squad h1{
+        font-size: 1.5rem;
+    }
+    .fotter {
+        background: rgba(24, 24, 83, 0.904);
+
+    }
+
+    .foot {
+        background: rgba(0, 0, 0, 0.58);
+        padding: 2rem 0rem 2rem 0rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .jaiho h1 {
+        text-align: center;
+    }
+
+    .socialmedia {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+    }
+
+    #cngcolor1 {
+        color: rgb(248 174 39);
+        text-align: center;
+    }
+
+    .formfill {
+        display: flex;
+        align-items: flex-start;
+        text-align: center;
+        margin-left: 2.1rem;
+    }
+
+    .formfill h1 {
+        text-align: center;
+        margin-bottom: 1.8rem;
+
+    }
+
+    #text {
+        margin-top: 1rem;
+    }
+
+    .scllogo1 h1 {
+        margin-right: 2rem;
+        text-align: center;
+    }
+
+    .scllogo1 img {
+        margin-left: 5rem;
+    }
+
+    .create {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.5rem;
+        background: rgba(24, 24, 83, 0.904);
+    }
+
+    .card-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .card-box input {
+        width: 18rem;
+        height: 2rem;
+
+    }
+
+    #text {
+        margin-top: 0.5rem;
+        width: 18rem;
+    }
+
+    #card-box button {
+        padding: 5px 15px 5px 15px;
+        background-color: yellow;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-radius: 5px;
+        margin-top: 1.5rem;
+    }
+}
+
+@media screen and (max-width:300px) {
+    body {
+        width: 100%;
+        background-color: #05073a
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    table {
+        margin: 0.6rem 0rem 0rem 0rem;
+    }
+
+    table tr td {
+        padding: 0rem 1rem 0rem 0.8rem;
+    }
+
+    /* =========navbar========= */
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        position: absolute;
+        top: 40%;
+        right: 0px;
+        width: 100%;
+        height: fit-content;
+        background-color: rgba(24, 24, 83);
+        box-shadow: 0 40-x 60px rgba(0, 0, 0, 0.0.3);
+        padding: 20px 0px 0px 20px;
+        visibility: hidden;
+    }
+
+    .open-navbar {
+        visibility: visible;
+    }
+    .navbar li {
+        margin: 1.5rem 0rem;
+    }
+    .dropdown-menu {
+        display: none;
+        height: fit-content;
+        border: 2px solid black;
+    }
+    
+    .dropdown-menu ul li a {
+        margin: 0px 3px 0px 7px;
+        text-align: left;
+        font-size: 14px;
+        font-weight: bolder;
+        font-family: 'Clrndnk', sans-serif;
+    }
+    #close {
+        display: flex;
+        font-size: 1.5rem;
+    }
+
+    #open {
+        display: flex;
+        font-size: 1.5rem;
+    }
+
+
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(24, 24, 83, 0.904);
+        padding: 1rem;
+    }
+
+    .scllogo img {
+        width: 3rem;
+        height: 3rem;
+    }
+    .heading h2 {
+        font-size: 1rem;
+    }
+
+    .about {
+        background: rgb(222, 220, 220);
+        margin: 0rem;
+    }
+   .title h3{
+    font-size: 1.2rem;
+    margin: 0;
+   }
+   .title p{
+    font-size: 0.5rem;
+   }
+   table tr td{
+    padding: 0.2rem;
+   }
+    .intro {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        margin: 0rem;
+        background: #fff;
+
+    }
+    .qualify{
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+        margin: 1rem;
+    }
+    .student{
+        padding: 0rem 0rem 0rem 0rem;
+    }
+    .student h3{
+     text-align: center;
+     font-size: 1rem;
+    }
+    .student p{
+        font-size: 0.5rem;
+    }
+    .work{
+        margin: 0;
+    }
+    .work p{
+        text-align: center;
+        font-size: 0.8rem;
+        color:#e79791
+    }
+    .whywho{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 0.5rem;
+        width:fit-content;
+        height:fit-content;
+        font-family: 'Raleway', sans-serif!important;
+    }
+    .why{
+         margin: 0rem 0rem 0rem 0rem;
+         
+    }
+    .why h1{
+        font-size: 1rem;
+        padding: 1rem;
+        font-weight: lighter;
+        color: rgb(228, 159, 103);
+    }
+    .why p{
+        font-size: 0.5rem;
+    text-align: justify;
+    }
+    .pro-container{
+        margin: 0;
+    }
+    .pro{
+        margin: 8px;
+    }
+    .squad{
+        margin: 0.5rem;
+    }
+    .squad h1{
+        font-size: 1.5rem;
+    }
+
+    .foot {
+        background: rgba(0, 0, 0, 0.58);
+        padding: 2rem 0rem 2rem 0rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .jaiho h1 {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .socialmedia {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+    }
+
+    #cngcolor1 {
+        color: rgb(248 174 39);
+        text-align: center;
+    }
+
+    .formfill {
+        display: flex;
+        align-items: flex-start;
+        text-align: center;
+        margin-left: 2.1rem;
+    }
+
+    .formfill h1 {
+        text-align: center;
+        margin-bottom: 1.8rem;
+        font-size: 1rem;
+    }
+
+    .scllogo1 h1 {
+        margin-right: 2rem;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .scllogo1 img {
+        margin-left: 5rem;
+    }
+
+    .create {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.5rem;
+        background: rgba(24, 24, 83, 0.904);
+    }
+
+    .card-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .card-box input {
+        width: 10rem;
+        height: 2rem;
+
+    }
+
+    #text {
+        margin-top: 0.5rem;
+        width: 10rem;
+    }
+
+    #card-box button {
+        padding: 5px 15px 5px 15px;
+        background-color: yellow;
+        font-size: 1.2rem;
+        font-weight: bold;
+        border-radius: 5px;
+        margin-top: 1.5rem;
+    }
+}
